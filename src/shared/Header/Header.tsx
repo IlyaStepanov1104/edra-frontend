@@ -7,8 +7,6 @@ import { Logo } from "./Header.assets/Logo";
 import { Button } from "reshaped";
 import { IconUser } from "./Header.assets/IconUser";
 import { useParams, useRouter } from "next/navigation";
-import { BotModel } from "@/entity/bot";
-import { useUnit } from "effector-react";
 
 interface ButtonProps {
     page: PagesType;

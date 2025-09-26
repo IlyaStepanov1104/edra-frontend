@@ -12,17 +12,17 @@ const compat = new FlatCompat({
 
 const fsdRules = {
   rules: {
-    // Запрещаем импорт из вышележащих слоёв (app → pages → widgets → features → entities → shared)
+    // Запрещаем импорт из вышележащих слоёв (app → fsd-pages → widgets → features → entities → shared)
     "no-restricted-imports": [
       "error",
       {
         patterns: [
           {
-            group: ["**/../**/*/{app,pages,widgets,features,entities}"],
+            group: ["**/../**/*/{app,fsd-pages,widgets,features,entities}"],
             message: "Импорт из вышележащих слоёв запрещён по FSD. Используйте DI или переместите зависимость."
           },
           {
-            group: ["**/../../**/*/{app,pages,widgets,features,entities}"],
+            group: ["**/../../**/*/{app,fsd-pages,widgets,features,entities}"],
             message: "Используйте абсолютные пути для импортов между слоями."
           }
         ]
